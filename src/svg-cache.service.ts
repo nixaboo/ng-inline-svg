@@ -4,6 +4,7 @@ import { Inject, Injectable, Optional, Renderer2, RendererFactory2 } from '@angu
 import { Observable, of } from 'rxjs';
 import { finalize, map, share } from 'rxjs/operators';
 import { InlineSVGConfig } from './inline-svg.config';
+import {SVGReplaceContent} from './svg-replace-content.service';
 
 @Injectable({
   providedIn: 'root'
@@ -59,6 +60,7 @@ export class SVGCacheService {
         }),
         share(),
         map((svgText: string) => {
+          svgText = SVGReplaceContent.ReplaceContentForSVG(svgText);
           const svgEl = this._svgElementFromString(svgText);
           SVGCacheService._cache.set(svgUrl, svgEl);
           return this._cloneSVG(svgEl);

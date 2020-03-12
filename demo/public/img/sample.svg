@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 414 736">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3aa3ff"/>
+      <stop offset="1" stop-color="#3493e6"/>
+    </linearGradient>
+    <filter id="background" x="-10" y="-5.999" width="432" height="677" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-start_page_9">
+      <rect width="414" height="736"/>
+    </clipPath>
+  </defs>
+  <g id="start_page_9" data-name="start page – 9" clip-path="url(#clip-start_page_9)">
+    <rect width="414" height="736" fill="#f3f2f2"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#background)">
+      <path id="background-2" data-name="background" d="M6775,5946.842V5314h414v633.1a836.074,836.074,0,0,1-414-.257Z" transform="translate(-6776 -5314)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

@@ -4,7 +4,7 @@
   "description": "Demo of ng-inline-svg.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arkon/ng-inline-svg.git"
+    "url": "https://github.com/nixaboo/ng-inline-svg.git"
   },
   "author": "Eugene Cheung",
   "license": "MIT",

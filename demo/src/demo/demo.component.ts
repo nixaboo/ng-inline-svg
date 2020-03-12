@@ -1,15 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { SVGReplaceContent } from 'ng-inline-svg';
 
 @Component({
   selector: 'demo',
   template: `
-    <div class="demo-svg1" aria-label="My icon 1" [inlineSVG]="'img/image.svg'" [onSVGLoaded]="handleSVG" [removeSVGAttributes]="['xmlns']"></div>
-    <div class="demo-svg2" aria-label="My icon 2" [inlineSVG]="'img/image.svg'" [replaceContents]="true" [setSVGAttributes]="_attrs">Content</div>
-    <div *ngIf="_showOther" class="demo-svg3" aria-label="My delayed icon" [inlineSVG]="'img/image_with_fill.svg'" [removeSVGAttributes]="['fill', 'width', 'height']"></div>
-    <div [inlineSVG]="'img/symbol.svg#fish'"></div>
-    <div [inlineSVG]="'#fish'"></div>
-    <div [inlineSVG]="'#fish'" [injectComponent]="true"></div>
-    <div [inlineSVG]="'img/nope.svg'" [fallbackImgUrl]="'https://nodei.co/npm/ng-inline-svg.png?compact=true'"></div>
+    <div [inlineSVG]="'img/sample.svg'"></div>
   `
 })
 export class DemoComponent implements OnInit {
@@ -19,6 +14,9 @@ export class DemoComponent implements OnInit {
     'height': '50'
   };
 
+  constructor() {
+    SVGReplaceContent.AddReplaceContent('#3aa3ff', '#00ff00');
+  }
   ngOnInit() {
     setTimeout(() => {
       this._showOther = true;
